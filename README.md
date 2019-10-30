@@ -13,4 +13,5 @@
     export PATH=/opt/Qt5.13.1/5.13.1/Tools/QtCreator/bin:$PATH
     export PATH=$QTDIR/gcc_64/bin:$PATH      //可以使用env命令查看环境变量QTDIR的路径是否是真实的QT安装路径（最好进入目录确认下），如果不对，在profile里添加类似这样的：export QTDIR=/opt/Qt5.13.1/5.13.1    保存后重启系统生效
 4. （步骤待验证是否多余）进入1中拷贝过去的vtk中，进到src目录，新建Build文件夹并进入（在命令行使用cd命令进）输入cmake -DCMAKE_PREFIX_PATH=/opt/Qt5.13.1/5.13.1
-5. 找到1中的setup.sh，加执行权限，执行。
+5. 找到1中的setup.sh，加执行权限，执行。中间报错缺少包去安装即可，例如缺 Qt5X11ExtrasConfig.cmake / qt5x11extras-config.cmake 安装libqt5x11extras-dev即可，缺Qt5UiPluginConfig.cmake  装qttools5-dev, qt5Config.cmake等等
+6. 用Clion导入整个工程文件夹，编译运行。
