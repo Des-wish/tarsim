@@ -15,6 +15,8 @@
     保存后注销或者重启生效。
 4. 进入tarsim文件夹执行 setup.sh 开始安装依赖环境。最后会提示找不到类似 Qt5Config.cmake/qt5_config.cmake的文件。
     可能会找不到如下文件：          |      对应要安装的包：（sudo apt-get install xxx）
+    OPENGL_opengl_LIBRARY       |       libgl1-mesa-dev
+    X11_Xt_LIB                  |       libxt-dev
     qt5Config.cmake             |       qtbase5-dev   qtdeclarative5-dev
     Qt5X11ExtrasConfig.cmake    |       libqt5x11extras-dev
     Qt5UiPluginConfig.cmake     |       qttools5-dev
@@ -22,4 +24,6 @@
     PS：可能安装某个包时缺少依赖环境，提示缺什么就安装什么即可。若最后出现类似下面的报错“ zlib1g-dev : 依赖: zlib1g (= 1:1.2.8.dfsg-2ubuntu4) 但是 1:1.2.8.dfsg-2ubuntu4.1 已安装。”  可以使用aptitude工具解决依赖问题，用apt-get安装即可，aptitude使用方法：sudo aptitude install zlib1g-dev
     需要以此法安装的包可能有libprotobuf-dev libmircommon-dev       libmirclient-dev libgles2-mesa-dev libgles2-mesa libegl1-mesa-dev，若提示需降级某些包，同意安装即可。
 5. 终于无报错地执行完setup.sh了，现在运行程序即可，方法（这里以打开kuka例程为例）：发哦tarsim目录下执行 ./tarsim -c ./user/client/samples/kuka_KR6
+
+
 
