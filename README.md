@@ -32,6 +32,7 @@
 2. 安装新版本cmake和gcc/g++。
 3. 对tarsim目录下的src文件夹进行cmake编译。生成的bin文件夹中有可执行文件。
 4. 亦可将整个工程导入CLion，直接编译即可通过，运行调试时可暂时指定配置文件路径：simApp.cpp第45行指定包含rbs.txt等的文件夹。注释掉下边一小段即可（50-66）。
+ps：调试记得把Release改为Debug， 在src目录下的cmakelists.txt第25行。
 
 
 
