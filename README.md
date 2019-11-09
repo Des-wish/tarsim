@@ -37,7 +37,10 @@
     ```
     * 再执行`make`可以生成可执行文件（可选）
 4. 若将整个工程导入CLion调试，直接编译即可通过，运行调试时可暂时指定配置文件路径：simApp.cpp第45行指定包含rbs.txt等的文件夹。注释掉下边一小段即可（50-66）。 <br>
-* ps：调试记得把Release改为Debug， 在src目录下的cmakelists.txt第25行。
+* setup.sh的作用：安装第三方库到系统路径中(`usr/local...`)，后期Qt等软件可直接调用。
+* ps：调试记得把Release改为Debug
+   * 在src目录下的cmakelists.txt第25行。
+   * 或者直接用CLion打开后在file--settings--Build...--Cmake里，选择Bulid type为debug，然后apply即可。
 
 
 
